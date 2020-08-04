@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<title>www.geographicalphtography.com</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+#myImg1,#myImg2,#myImg3,#myImg4,#myImg5,#myImg6,#myImg7,#myImg8,#myImg9,#myImg10,#myImg11,#myImg12 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg1:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg2:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg3:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg4:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg5:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg6:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg7:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg8:hover {box-shadow: 5px 5px 10px #9A0B0B;}
+#myImg9:hover {opacity: 0.7;}
+#myImg10:hover {opacity: 0.7;}
+#myImg11:hover {opacity: 0.7;}
+#myImg12:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+img.touch:hover{
+  border: 3px solid red;
+}
+
+#social:hover{
+  border: 2px solid green;
+}
+
+#social {
+  color: white;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 200px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: url(46728.jpg);
+}
+
+.header h1 {
+    font-size: 35px;
+    color: green;
+    font-family: Lobster;
+    overflow: auto;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: blue;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.fakimg {
+    width: 100%;
+}
+
+.faknimg {
+    width: 100%;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#new{
+  background-color: black;
+}
+.card h3{
+    font-size: 30px;
+    color: #EC1044;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+#foot {
+  background: url(photography.png);
+}
+
+#foot b {
+  font-size: 25px;
+  color: red;
+}
+
+#foot p {
+  font-size: 20px;
+  color: white;
+}
+
+.dam {
+  color: red;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>NATURE & WILDLIFE PHOTOGRAPHY</h1>
+  <font face="arial" color="white" SIZE="3">
+  <MARQUEE BEHAVIOR="alternate"><b>WELCOME TO THE WORLD OF PHOTOGRAPHY</b></MARQUEE>
+</Font>
+  
+</div>
+
+<div class="topnav">
+  <a href="#">HOME</a>
+  <a href="#">BLOG</a>
+  <a href="#">PHOTOS</a>
+  <a id="lon" href="#" style="float:right">CONTACT</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>NATURE PHOTOGRAPHY</h2>
+      <h5>Last Updated on Dec 7, 2019</h5>
+      <section>
+      <img id="myImg1" class="fakimg" alt="MOUNT EVEREST" src="mount1.jpg" style="height:300px;">
+      <img id="myImg2" class="fakimg" alt="KARAKORAM" src="256667.jpg" style="height:300px;">
+      <img id="myImg3" class="fakimg" alt="ANNAPURNA" src="annapurna.jpg" style="height:300px;">
+      <img id="myImg4" class="fakimg" alt="ALPS" src="alps.jpg" style="height:300px;">
+      </section>
+      <h3><p>MOUNTAIN PHOTOGRAPHY......</p></h3>
+      <p><b>Mountain photography</b> is a specific and very adventurous genre. People passionate about capturing mountain backgrounds carefully choose landscapes and create images with a straight horizon. In mountain photography, the main principles are shooting long and shooting wide.</p>
+    </div>
+    <div class="card">
+      <h2>WILDLIFE PHOTOGRAPHY</h2>
+      <h5>Last Updated on Feb 15, 2020</h5>
+      <section>
+      <img id="myImg5" class="faknimg" alt="LION" src="LION.jpg" style="height:400px;">
+      <img id="myImg6" class="faknimg" alt="ELEPHANT" src="ELEPHANT.jpg" style="height:400px;">
+      <img id="myImg7" class="faknimg" alt="GOOSE" src="GOOSE.jpg" style="height:400px;">
+      <img id="myImg8" class="faknimg" alt="EAGLE" src="EAGLE.jpg" style="height:400px;">
+      </section>
+      <h3><p>WILDLIFE PHOTOGRAPHY......</p></h3>
+      <p><b>Wildlife photography</b> is a genre of photography concerned with documenting various forms of wildlife in their natural habitat.</p>
+
+<p>As well as requiring photography skills, wildlife photographers may need field craft skills. For example, some animals are difficult to approach and thus a knowledge of the animal's behavior is needed in order to be able to predict its actions. Photographing some species may require stalking skills or the use of a hide/blind for concealment.</p>
+
+<p>While wildlife photographs can be taken using basic equipment, successful photography of some types of wildlife requires specialist equipment, such as macro lenses for insects, long focal length lenses for birds and underwater cameras for marine life. However, a great wildlife photograph can also be the result of being in the right place at the right time and often involves a good understanding of animal behavior in order to anticipate interesting situations to capture in photography.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Us</h2>
+      <img src="46768.jpg" style="width: 100%">
+      <p><b>WELCOME</b> to our <abbr class="gd" title="www.geographicalphtography.com">OFFICIAL</abbr> website.</p><article>There are Ten members in our <abbr title="THE NAME OF OUR TEAM NAME IS GEOGRAPHICAL PHOTOGRAPHY">TEAM</abbr>.Every members in our team as expert as their photograpgy profession like <b>Wildlife,Nature etc</b>.If you like our <b>photography </b><abbr title="LINK IN DESCRIPTION"><b><a href="#old" class="dam"><i>FOLLOW</i></a></b></abbr> us And want to contact us check our <b><a href="#lon"><i>CONTACT</i></a></b></article>
+    </div>
+    <div class="card">
+      <h2>Some Popular Post</h2>
+      <img id="myImg9" class="touch"  src="46715.jpg" style="width: 100%">
+      <img id="myImg10" class="touch" src="8.jpg" style="width: 100%">
+      <img id="myImg11" class="touch" src="13588.jpg" style="width: 100%">
+      <img id="myImg12" class="touch" src="256670.jpg" style="width: 100%">
+    </div>
+  </div>
+</div>
+
+<div id="foot" class="footer">
+  <p><b>DISCLAIMER:-</b> Photography is the art, application and practice of creating durable images by recording light or other electromagnetic radiation, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film. It is employed in many fields of science, manufacturing (e.g., photolithography), and business, as well as its more direct uses for art, film and video production, recreational purposes, hobby, and mass communication.</p>
+
+<p>Typically, a lens is used to focus the light reflected or emitted from objects into a real image on the light-sensitive surface inside a camera during a timed exposure. With an electronic image sensor, this produces an electrical charge at each pixel, which is electronically processed and stored in a digital image file for subsequent display or processing. The result with photographic emulsion is an invisible latent image, which is later chemically "developed" into a visible image, either negative or positive depending on the purpose of the photographic material and the method of processing. A negative image on film is traditionally used to photographically create a positive image on a paper base, known as a print, either by using an enlarger or by contact printing.</p>
+</div>
+
+<div id="new" class="card">
+      <h3><i id="old">Follow Me</i></h3>
+      <a href="https://www.facebook.com/"><i id="social" class="fa fa-facebook-official" style="font-size: 30px"></i></a>
+      <a href="#"><i id="social" class="fa fa-pinterest-p" style="font-size: 30px"></i></a>
+      <a href="https://www.twitter.com/"><i id="social" class="fa fa-twitter" style="font-size: 30px"></i></a>
+      <a href="#"><i id="social" class="fa fa-flickr" style="font-size: 30px"></i></a>
+      <a href="https://www.linkedin.com/"><i id="social" class="fa fa-linkedin" style="font-size: 30px"></i></a>
+    </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script type="text/javascript">
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("fakimg");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+
+var Index = 0;
+carousel1();
+
+function carousel1() {
+  var i;
+  var x = document.getElementsByClassName("faknimg");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  Index++;
+  if (Index > x.length) {Index = 1}
+  x[Index-1].style.display = "block";
+  setTimeout(carousel1, 4000);
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img1 = document.getElementById('myImg1');
+var img2 = document.getElementById('myImg2');
+var img3 = document.getElementById('myImg3');
+var img4 = document.getElementById('myImg4');
+var img5 = document.getElementById('myImg5');
+var img6 = document.getElementById('myImg6');
+var img7 = document.getElementById('myImg7');
+var img8 = document.getElementById('myImg8');
+var img9 = document.getElementById('myImg9');
+var img10 = document.getElementById('myImg10');
+var img11 = document.getElementById('myImg11');
+var img12 = document.getElementById('myImg12');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img5.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img6.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img7.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img8.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img9.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img10.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img11.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img12.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</body>
+</html>
